@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://pavitramuthukrishnan.com/sitemap.xml
