@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light only">
+<title>Experience - Pavitra Muthukrishnan</title>
+<meta name="description" content="Nine years across Step4Progress, Vibe Media & Production, Titan Company Ltd (Tanishq), BCC Martech, and Unique Very Indian Studio.">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   PAVITRA MUTHUKRISHNAN — EXECUTIVE PORTFOLIO
+   Design tokens
+   ============================================================ */
+:root{
+  color-scheme: light only;
+  --bg:#FFFFFF;
+  --bg-secondary:#F8F9FA;
+  --text-primary:#111827;
+  --text-secondary:#6B7280;
+  --accent:#2563EB;
+  --accent-dim:#EFF3FE;
+  --border:#E5E7EB;
+  --card:#FFFFFF;
+
+  --font-body:'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', sans-serif;
+
+  --max-width:1200px;
+  --content-width:820px;
+
+  --space-1:8px;
+  --space-2:16px;
+  --space-3:24px;
+  --space-4:32px;
+  --space-5:48px;
+  --space-6:64px;
+  --space-7:96px;
+  --space-8:140px;
+
+  --radius-sm:6px;
+  --radius-md:10px;
+  --radius-lg:16px;
+
+  --ease:cubic-bezier(.16,1,.3,1);
+}
+
+*,*::before,*::after{box-sizing:border-box;}
+html{scroll-behavior:smooth; background:#FFFFFF;}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important;}
+}
+
+body{
+  margin:0;
+  font-family:var(--font-body);
+  color:var(--text-primary);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+  font-size:18px;
+}
+
+h1,h2,h3,h4{
+  margin:0 0 var(--space-2) 0;
+  font-weight:600;
+  letter-spacing:-0.02em;
+  line-height:1.15;
+}
+h1{font-size:clamp(36px,6vw,68px); font-weight:700; letter-spacing:-0.03em;}
+h2{font-size:clamp(28px,4vw,40px);}
+h3{font-size:clamp(20px,2.4vw,24px);}
+p{margin:0 0 var(--space-2) 0; color:var(--text-primary);}
+a{color:inherit; text-decoration:none;}
+
+.eyebrow{
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:var(--space-2);
+  display:block;
+}
+
+.text-secondary{color:var(--text-secondary);}
+.lede{font-size:22px; color:var(--text-secondary); line-height:1.55; font-weight:400;}
+
+/* ---------- Layout ---------- */
+.wrap{
+  max-width:var(--max-width);
+  margin:0 auto;
+  padding:0 var(--space-4);
+}
+.prose{
+  max-width:var(--content-width);
+}
+section{padding:var(--space-7) 0;}
+section.tight{padding:var(--space-6) 0;}
+.divider{border:none; border-top:1px solid var(--border); margin:0;}
+.bg-secondary{background:var(--bg-secondary);}
+
+/* ---------- Nav ---------- */
+.site-nav{
+  position:sticky; top:0; z-index:100;
+  background:rgba(255,255,255,.85);
+  backdrop-filter:saturate(180%) blur(12px);
+  border-bottom:1px solid var(--border);
+}
+.site-nav .wrap{
+  display:flex; align-items:center; justify-content:space-between;
+  height:72px;
+}
+.nav-mark{font-weight:700; font-size:17px; letter-spacing:-0.01em;}
+.nav-links{display:flex; gap:var(--space-4); list-style:none; margin:0; padding:0; align-items:center;}
+.nav-links a{
+  font-size:15px; font-weight:500; color:var(--text-secondary);
+  padding:8px 0; border-bottom:2px solid transparent;
+  transition:color .2s var(--ease), border-color .2s var(--ease);
+}
+.nav-links a:hover, .nav-links a.active{color:var(--text-primary); border-bottom-color:var(--accent);}
+.nav-cta{
+  background:var(--text-primary); color:#fff!important; padding:10px 18px!important;
+  border-radius:var(--radius-sm); font-size:14px!important; border-bottom:none!important;
+}
+.nav-cta:hover{background:var(--accent)!important;}
+.nav-toggle{display:none; background:none; border:none; cursor:pointer; padding:8px;}
+.nav-toggle span{display:block; width:22px; height:2px; background:var(--text-primary); margin:5px 0; transition:transform .2s var(--ease), opacity .2s var(--ease);}
+
+@media (max-width:860px){
+  .nav-links{
+    display:none;
+    position:fixed; top:72px; left:0; right:0; bottom:0;
+    background:#fff; flex-direction:column; align-items:flex-start;
+    padding:var(--space-3) var(--space-4); gap:var(--space-2);
+    z-index:99;
+  }
+  .nav-links.open{display:flex;}
+  .nav-toggle{display:block;}
+}
+
+/* ---------- Buttons ---------- */
+.btn{
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:15px; font-weight:600;
+  padding:14px 26px; border-radius:var(--radius-sm);
+  border:1px solid transparent; cursor:pointer;
+  transition:transform .2s var(--ease), background .2s var(--ease), border-color .2s var(--ease), color .2s var(--ease);
+}
+.btn-primary{background:var(--text-primary); color:#fff;}
+.btn-primary:hover{background:var(--accent);}
+.btn-secondary{background:transparent; color:var(--text-primary); border-color:var(--border);}
+.btn-secondary:hover{border-color:var(--text-primary);}
+.btn-row{display:flex; gap:var(--space-2); flex-wrap:wrap;}
+
+/* ---------- Hero ---------- */
+.hero{padding:var(--space-8) 0 var(--space-6);}
+.hero-role{
+  font-size:16px; color:var(--text-secondary); font-weight:500;
+  margin-bottom:var(--space-3); letter-spacing:.01em;
+}
+.hero h1{max-width:820px;}
+.hero .lede{max-width:640px; margin-top:var(--space-3);}
+.hero .btn-row{margin-top:var(--space-5);}
+
+/* Career-arc signature strip */
+.arc-strip{
+  margin-top:var(--space-7);
+  display:flex; align-items:center; flex-wrap:wrap;
+  gap:0; border-top:1px solid var(--border); padding-top:var(--space-4);
+}
+.arc-item{
+  font-size:14px; color:var(--text-secondary); font-weight:500;
+  padding-right:var(--space-2); margin-right:var(--space-2);
+  position:relative;
+}
+.arc-item:not(:last-child)::after{
+  content:'→'; color:var(--border); margin-left:var(--space-2); font-weight:400;
+}
+.arc-item.current{color:var(--accent); font-weight:700;}
+
+/* ---------- Cards ---------- */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:var(--radius-md);
+  padding:var(--space-4);
+  transition:transform .25s var(--ease), box-shadow .25s var(--ease), border-color .25s var(--ease);
+}
+.card:hover{transform:translateY(-3px); box-shadow:0 12px 32px -16px rgba(17,24,39,.16); border-color:#D8DCE3;}
+
+.grid{display:grid; gap:var(--space-3);}
+.grid-2{grid-template-columns:repeat(2,1fr);}
+.grid-3{grid-template-columns:repeat(3,1fr);}
+@media (max-width:760px){.grid-2,.grid-3{grid-template-columns:1fr;}}
+
+/* ---------- Metrics ---------- */
+.metric{padding:var(--space-3) 0; border-top:1px solid var(--border);}
+.metric-num{font-size:40px; font-weight:700; letter-spacing:-0.02em; color:var(--text-primary);}
+.metric-label{font-size:15px; color:var(--text-secondary); margin-top:4px;}
+
+/* ---------- Experience accordion ---------- */
+.exp-card{border:1px solid var(--border); border-radius:var(--radius-md); margin-bottom:var(--space-2); overflow:hidden; background:#fff;}
+.exp-head{
+  display:flex; justify-content:space-between; align-items:center; gap:var(--space-3);
+  padding:var(--space-3) var(--space-4); cursor:pointer; user-select:none;
+  background:none; border:none; width:100%; text-align:left; font-family:inherit;
+}
+.exp-head:hover{background:var(--bg-secondary);}
+.exp-title{display:flex; flex-direction:column; gap:2px;}
+.exp-company{font-size:19px; font-weight:600;}
+.exp-role{font-size:15px; color:var(--text-secondary);}
+.exp-meta{display:flex; align-items:center; gap:var(--space-3);}
+.exp-duration{font-size:14px; color:var(--text-secondary); white-space:nowrap;}
+.exp-icon{width:20px; height:20px; flex-shrink:0; transition:transform .3s var(--ease); color:var(--text-secondary);}
+.exp-card[data-open="true"] .exp-icon{transform:rotate(180deg);}
+.exp-body{
+  max-height:0; overflow:hidden; transition:max-height .35s var(--ease);
+}
+.exp-body-inner{padding:0 var(--space-4) var(--space-4); border-top:1px solid var(--border);}
+.exp-body-inner p{margin-top:var(--space-2);}
+.exp-body-inner ul{margin:var(--space-2) 0; padding-left:20px;}
+.exp-body-inner li{margin-bottom:6px; color:var(--text-primary);}
+.tag-row{display:flex; flex-wrap:wrap; gap:8px; margin-top:var(--space-2);}
+.tag{font-size:13px; background:var(--accent-dim); color:var(--accent); padding:6px 12px; border-radius:20px; font-weight:600;}
+
+/* ---------- Case study cards ---------- */
+.cs-card{display:block; border:1px solid var(--border); border-radius:var(--radius-md); padding:var(--space-4); background:#fff;}
+.cs-card .eyebrow{margin-bottom:var(--space-1);}
+.cs-card h3{margin-bottom:8px;}
+.cs-arrow{margin-top:var(--space-2); font-size:14px; font-weight:600; color:var(--accent); display:flex; align-items:center; gap:6px;}
+
+/* ---------- Case study page ---------- */
+.cs-hero{padding:var(--space-7) 0 var(--space-5); border-bottom:1px solid var(--border);}
+.cs-flow{display:flex; flex-direction:column; gap:0;}
+.cs-step{padding:var(--space-5) 0; border-top:1px solid var(--border);}
+.cs-step:first-child{border-top:none;}
+.cs-step-label{font-size:13px; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:var(--accent); margin-bottom:var(--space-2); display:block;}
+
+/* ---------- Section titles ---------- */
+.section-head{margin-bottom:var(--space-5); max-width:640px;}
+
+/* ---------- Contact ---------- */
+.contact-card{display:flex; align-items:center; justify-content:space-between; padding:var(--space-3) var(--space-4); border:1px solid var(--border); border-radius:var(--radius-md); margin-bottom:var(--space-2);}
+.contact-card:hover{border-color:var(--accent);}
+.contact-label{font-size:13px; color:var(--text-secondary); text-transform:uppercase; letter-spacing:.06em; font-weight:600;}
+.contact-value{font-size:18px; font-weight:600; margin-top:2px;}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--border); padding:var(--space-5) 0; margin-top:var(--space-7);}
+footer .wrap{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:var(--space-2);}
+footer p{margin:0; font-size:14px; color:var(--text-secondary);}
+.footer-links{display:flex; gap:var(--space-3); list-style:none; padding:0; margin:0;}
+.footer-links a{font-size:14px; color:var(--text-secondary);}
+.footer-links a:hover{color:var(--accent);}
+
+/* ---------- Scroll reveal ---------- */
+.reveal{opacity:0; transform:translateY(16px); transition:opacity .6s var(--ease), transform .6s var(--ease);}
+.reveal.in{opacity:1; transform:translateY(0);}
+
+/* ---------- Resume page ---------- */
+.resume-toolbar{display:flex; gap:var(--space-2); flex-wrap:wrap; margin-bottom:var(--space-4);}
+.pdf-frame{width:100%; height:80vh; border:1px solid var(--border); border-radius:var(--radius-md); background:var(--bg-secondary);}
+
+/* ---------- Focus states ---------- */
+a:focus-visible, button:focus-visible, .btn:focus-visible{
+  outline:2px solid var(--accent); outline-offset:3px; border-radius:4px;
+}
+
+@media (max-width:600px){
+  body{font-size:16px;}
+  section{padding:var(--space-6) 0;}
+  .grid-3{grid-template-columns:1fr;}
+}
+
+</style>
+</head>
+<body>
+<nav class="site-nav" aria-label="Primary">
+  <div class="wrap">
+    <a href="index.html" class="nav-mark">Pavitra Muthukrishnan</a>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="experience.html">Experience</a></li>
+      <li><a href="case-studies/index.html">Case Studies</a></li>
+      <li><a href="resume/index.html">Resume</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in Touch</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:var(--space-4);">
+  <div class="wrap prose">
+    <span class="eyebrow">Experience</span>
+    <h1>Nine years, five industries, one throughline</h1>
+    <p class="lede">Each role expands below with responsibilities, business outcomes, and the skills applied.</p>
+  </div>
+</header>
+
+<section class="tight reveal">
+  <div class="wrap prose">
+
+    <div class="exp-card" data-open="true">
+      <button class="exp-head" aria-expanded="true">
+        <div class="exp-title">
+          <span class="exp-company">Step4Progress</span>
+          <span class="exp-role">Business Development Manager &amp; UK Student Counsellor</span>
+        </div>
+        <div class="exp-meta">
+          <span class="exp-duration">Current</span>
+          <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="exp-body" style="max-height:600px;">
+        <div class="exp-body-inner">
+          <p>Supported students through their international education journey while contributing to business development, operational improvements, and marketing initiatives.</p>
+          <ul>
+            <li>Guided prospective students through admissions and visa processes.</li>
+            <li>Improved counselling workflows and internal documentation.</li>
+            <li>Developed marketing campaigns and educational content.</li>
+            <li>Strengthened digital presence through strategic content planning.</li>
+            <li>Collaborated with internal teams to improve lead management and customer communication.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Business Development</span>
+            <span class="tag">Client Counselling</span>
+            <span class="tag">Content Strategy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card" data-open="false">
+      <button class="exp-head" aria-expanded="false">
+        <div class="exp-title">
+          <span class="exp-company">Vibe Media &amp; Production</span>
+          <span class="exp-role">Client Success &amp; Branding</span>
+        </div>
+        <div class="exp-meta">
+          <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="exp-body">
+        <div class="exp-body-inner">
+          <p>Managed client communication, branding initiatives, and campaign execution for healthcare and business clients.</p>
+          <ul>
+            <li>Coordinated projects between clients and creative teams.</li>
+            <li>Built long-term client relationships through structured communication.</li>
+            <li>Managed campaign timelines and project delivery.</li>
+            <li>Introduced AI-assisted workflows for research and documentation.</li>
+            <li>Improved operational efficiency across ongoing projects.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Client Success</span>
+            <span class="tag">Branding</span>
+            <span class="tag">AI-Assisted Workflows</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card" data-open="false">
+      <button class="exp-head" aria-expanded="false">
+        <div class="exp-title">
+          <span class="exp-company">Titan Company Ltd. - Tanishq</span>
+          <span class="exp-role">Assistant Store Manager</span>
+        </div>
+        <div class="exp-meta">
+          <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="exp-body">
+        <div class="exp-body-inner">
+          <p>Delivered premium customer experiences while supporting retail operations and sales performance.</p>
+          <ul>
+            <li>Managed customer relationships and service excellence.</li>
+            <li>Achieved 120% of sales target through consultative selling.</li>
+            <li>Supported inventory and store operations.</li>
+            <li>Mentored team members on customer engagement.</li>
+            <li>Resolved customer concerns professionally.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Retail Operations</span>
+            <span class="tag">Consultative Selling</span>
+            <span class="tag">Team Mentoring</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card" data-open="false">
+      <button class="exp-head" aria-expanded="false">
+        <div class="exp-title">
+          <span class="exp-company">BCC Martech</span>
+          <span class="exp-role">Senior Digital Content Strategist</span>
+        </div>
+        <div class="exp-meta">
+          <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="exp-body">
+        <div class="exp-body-inner">
+          <p>Developed healthcare communication strategies and performance-focused marketing campaigns.</p>
+          <ul>
+            <li>Created digital strategies for healthcare brands.</li>
+            <li>Collaborated with medical experts and marketing teams.</li>
+            <li>Optimized campaign messaging based on performance data.</li>
+            <li>Improved engagement and conversion through content optimization.</li>
+            <li>Delivered measurable business impact through strategic communication.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Healthcare Marketing</span>
+            <span class="tag">Content Strategy</span>
+            <span class="tag">Performance Optimization</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-card" data-open="false">
+      <button class="exp-head" aria-expanded="false">
+        <div class="exp-title">
+          <span class="exp-company">Unique Very Indian Studio</span>
+          <span class="exp-role">Studio Head - Operations &amp; Brand Communications</span>
+        </div>
+        <div class="exp-meta">
+          <svg class="exp-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+        </div>
+      </button>
+      <div class="exp-body">
+        <div class="exp-body-inner">
+          <p>Led branding projects, studio operations, and client communications while overseeing project delivery.</p>
+          <ul>
+            <li>Managed branding and marketing projects.</li>
+            <li>Coordinated multidisciplinary teams.</li>
+            <li>Improved operational workflows.</li>
+            <li>Maintained client relationships from briefing to delivery.</li>
+            <li>Ensured quality across creative outputs.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Studio Operations</span>
+            <span class="tag">Brand Communications</span>
+            <span class="tag">Team Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 Pavitra Muthukrishnan. Madurai, Tamil Nadu, India.</p>
+    <ul class="footer-links">
+      <li><a href="mailto:pavitra962023@gmail.com">Email</a></li>
+      <li><a href="https://linkedin.com/in/pavitra-muthukrishnan-b9a6038a" target="_blank" rel="noopener">LinkedIn</a></li>
+      <li><a href="resume/index.html">Resume</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+// Nav toggle (mobile)
+document.addEventListener('DOMContentLoaded', () => {
+  const toggle = document.querySelector('.nav-toggle');
+  const links = document.querySelector('.nav-links');
+  if (toggle && links) {
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+    });
+    links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      links.classList.remove('open');
+      toggle.setAttribute('aria-expanded', 'false');
+    }));
+  }
+
+  // Experience accordion
+  document.querySelectorAll('.exp-card').forEach(card => {
+    const head = card.querySelector('.exp-head');
+    const body = card.querySelector('.exp-body');
+    if (!head || !body) return;
+    head.addEventListener('click', () => {
+      const isOpen = card.getAttribute('data-open') === 'true';
+      // close others
+      document.querySelectorAll('.exp-card[data-open="true"]').forEach(other => {
+        if (other !== card) {
+          other.setAttribute('data-open', 'false');
+          other.querySelector('.exp-body').style.maxHeight = null;
+          other.querySelector('.exp-head').setAttribute('aria-expanded', 'false');
+        }
+      });
+      card.setAttribute('data-open', String(!isOpen));
+      head.setAttribute('aria-expanded', String(!isOpen));
+      body.style.maxHeight = !isOpen ? body.scrollHeight + 'px' : null;
+    });
+  });
+
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && revealEls.length) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => io.observe(el));
+  } else {
+    revealEls.forEach(el => el.classList.add('in'));
+  }
+
+  // Active nav link highlight based on current page
+  const current = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === current || (current === '' && href === 'index.html')) {
+      a.classList.add('active');
+    }
+  });
+});
+
+</script>
+</body>
+</html>
